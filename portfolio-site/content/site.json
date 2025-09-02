@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "name": "Your Name",
+    "title": "AI-Native Product Leader",
+    "tagline": "I turn ambiguous problems into products that ship. Hands-on with AI/ML, data platforms, and healthcare workflows.",
+    "cta_primary": "Let's Talk",
+    "cta_secondary": "View Resume",
+    "cta_tertiary": "Browse Prompts"
+  },
+  "skills": [
+    "LangChain",
+    "OpenAI",
+    "CrewAI",
+    "Bedrock",
+    "PostHog",
+    "DataHub",
+    "React",
+    "TypeScript",
+    "Python",
+    "AWS"
+  ],
+  "bento_cards": [
+    {
+      "id": "how-i-work",
+      "title": "How I Work",
+      "description": "AI-native approach to product development with hands-on technical expertise",
+      "icon": "Brain",
+      "link": "/about",
+      "size": "normal"
+    },
+    {
+      "id": "prompt-library",
+      "title": "Prompt Library",
+      "description": "Curated collection of PM prompts for strategy, discovery, and execution",
+      "icon": "Sparkles",
+      "link": "/apps",
+      "size": "normal"
+    },
+    {
+      "id": "work-stories",
+      "title": "Work Stories",
+      "description": "Real-world experience building data platforms and AI products",
+      "icon": "Briefcase",
+      "link": "/experience",
+      "size": "large"
+    },
+    {
+      "id": "latest-writing",
+      "title": "Latest Writing",
+      "description": "Thoughts on AI, product management, and building at scale",
+      "icon": "PenTool",
+      "link": "/blog",
+      "size": "normal"
+    },
+    {
+      "id": "resume",
+      "title": "Resume",
+      "description": "Download my latest resume and work history",
+      "icon": "FileText",
+      "link": "/resume",
+      "size": "normal"
+    },
+    {
+      "id": "contact",
+      "title": "Get in Touch",
+      "description": "Let's discuss your product challenges and opportunities",
+      "icon": "Mail",
+      "link": "/contact",
+      "size": "normal"
+    }
+  ],
+  "about": {
+    "philosophy": [
+      {
+        "title": "AI-First Thinking",
+        "description": "Every product decision starts with 'How can AI enhance this experience?'",
+        "icon": "Cpu"
+      },
+      {
+        "title": "Data-Driven Iteration",
+        "description": "Ship fast, measure everything, iterate based on real user behavior",
+        "icon": "ChartBar"
+      },
+      {
+        "title": "Technical Depth",
+        "description": "Hands-on with code to understand constraints and unlock possibilities",
+        "icon": "Code"
+      },
+      {
+        "title": "User Obsession",
+        "description": "Deep empathy for user problems drives every product decision",
+        "icon": "Users"
+      }
+    ],
+    "strengths": [
+      {
+        "title": "AI/ML Integration",
+        "description": "Practical experience with LLMs, embeddings, and production AI systems",
+        "skills": ["OpenAI API", "LangChain", "Vector DBs", "Fine-tuning"]
+      },
+      {
+        "title": "Data Platforms",
+        "description": "Built scalable data infrastructure for analytics and ML workflows",
+        "skills": ["Data Pipelines", "ETL", "Analytics", "DataHub"]
+      },
+      {
+        "title": "Product Strategy",
+        "description": "From zero-to-one products to scaling existing platforms",
+        "skills": ["Roadmapping", "OKRs", "Market Analysis", "GTM"]
+      },
+      {
+        "title": "Zero-to-One",
+        "description": "Launched multiple products from concept to production",
+        "skills": ["MVP Design", "User Research", "Rapid Prototyping", "Launch"]
+      }
+    ],
+    "tools": [
+      "Python",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "AWS",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "Figma",
+      "PostHog",
+      "Segment",
+      "Jira",
+      "Linear",
+      "Notion"
+    ]
+  }
+}
