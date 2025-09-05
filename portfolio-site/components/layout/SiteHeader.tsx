@@ -72,7 +72,7 @@ export function SiteHeader() {
               className="bg-accent text-accent-foreground hover:bg-accent/90"
               asChild
             >
-              <Link href="/contact">Let's Talk</Link>
+              <Link href="/contact">Let&apos;s Talk</Link>
             </Button>
           </div>
 
@@ -118,7 +118,7 @@ export function SiteHeader() {
                   className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
                   asChild
                 >
-                  <Link href="/contact">Let's Talk</Link>
+                  <Link href="/contact">Let&apos;s Talk</Link>
                 </Button>
               </div>
             </motion.div>

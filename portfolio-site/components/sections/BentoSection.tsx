@@ -1,7 +1,6 @@
 'use client'
 
 import { GlassCard } from '@/components/bento/GlassCard'
-import { BentoGrid, BentoGridItem } from '@/components/bento/BentoGrid'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowUpRight, Brain, Sparkles, Briefcase, PenTool, FileText, Mail } from 'lucide-react'
