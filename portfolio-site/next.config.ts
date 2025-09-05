@@ -5,6 +5,22 @@ const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   experimental: {
     mdxRs: true
+  },
+  // Configure for Replit environment
+  allowedDevOrigins: ["*", "*.replit.dev", "*.replit.app"],
+  // Allow all hosts for Replit proxy
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN'
+          }
+        ]
+      }
+    ]
   }
 };
 
