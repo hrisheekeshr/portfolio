@@ -1,9 +1,9 @@
 import { getPublishedBlogPosts, getAllTags } from '@/lib/blog'
 import { BlogList } from '@/components/blog/BlogList'
 
-export default function BlogPage() {
-  const posts = getPublishedBlogPosts()
-  const allTags = getAllTags()
+export default async function BlogPage() {
+  const posts = await getPublishedBlogPosts()
+  const allTags = await getAllTags()
 
   return (
     <div className="container mx-auto px-6 py-24 min-h-screen">

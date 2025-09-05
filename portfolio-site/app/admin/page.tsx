@@ -11,7 +11,7 @@ export default async function AdminPage() {
     redirect('/admin/login')
   }
 
-  const posts = getAllBlogPosts()
+  const posts = await getAllBlogPosts()
   const stats = {
     total: posts.length,
     published: posts.filter(p => p.status === 'published').length,

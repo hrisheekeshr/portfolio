@@ -1,9 +1,7 @@
-import { Keystatic } from '@keystatic/next'
+import { makePage } from '@keystatic/next/ui/app'
 import config from '../../../keystatic.config'
 
-export default function KeystaticApp() {
-  return <Keystatic config={config} />
-}
+export default makePage(config)
 
 export const metadata = {
   title: 'Portfolio CMS Admin',

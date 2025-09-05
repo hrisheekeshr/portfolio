@@ -20,7 +20,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   }
 
   try {
-    const post = getBlogPost(params.slug)
+    const post = await getBlogPost(params.slug)
     
     if (!post) {
       return NextResponse.json(

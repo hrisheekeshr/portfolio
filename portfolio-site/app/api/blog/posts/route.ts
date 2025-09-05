@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const posts = getAllBlogPosts()
+    const posts = await getAllBlogPosts()
     return NextResponse.json({ posts })
   } catch (error) {
     console.error('Error fetching posts:', error)
