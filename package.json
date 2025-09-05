@@ -1,0 +1,16 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. Features a clean design with bento grid layout, theme switching, and comprehensive navigation for showcasing professional experience, projects, and contact information.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@keystatic/core": "^0.5.48",
+    "@keystatic/next": "^5.0.4"
+  }
+}
