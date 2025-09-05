@@ -1,13 +1,15 @@
 import { config, fields, collection } from '@keystatic/core';
 
 export default config({
-  storage: {
-    kind: 'github',
-    repo: {
-      owner: process.env.GITHUB_REPO_OWNER || '',
-      name: process.env.GITHUB_REPO_NAME || '',
-    },
-  },
+  storage: process.env.GITHUB_REPO_OWNER && process.env.GITHUB_REPO_NAME 
+    ? {
+        kind: 'github',
+        repo: {
+          owner: process.env.GITHUB_REPO_OWNER,
+          name: process.env.GITHUB_REPO_NAME,
+        },
+      }
+    : { kind: 'local' },
   ui: {
     brand: { name: 'Portfolio CMS' },
     navigation: {
