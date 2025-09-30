@@ -14,7 +14,7 @@ export const mdxComponents = {
   // Override default components
   pre: ({ children, ...props }: { children?: React.ReactNode; [key: string]: unknown }) => {
     // Extract code content and language from pre/code structure
-    const codeElement = children?.props
+    const codeElement = (children as { props?: { children?: string; className?: string } })?.props
     const code = codeElement?.children
     const language = codeElement?.className?.replace('language-', '') || 'text'
     
