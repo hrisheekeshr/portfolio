@@ -8,10 +8,11 @@ import matter from 'gray-matter'
 const blogDirectory = path.join(process.cwd(), 'content/blog')
 
 interface RouteParams {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function GET(request: NextRequest, { params }: RouteParams) {
+  const { slug } = await params
   if (!requireAuth(request)) {
     return NextResponse.json(
       { error: 'Unauthorized' },
@@ -20,7 +21,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
   }
 
   try {
-    const post = getBlogPost(params.slug)
+    const post = getBlogPost(slug)
     
     if (!post) {
       return NextResponse.json(
@@ -40,6 +41,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 }
 
 export async function PUT(request: NextRequest, { params }: RouteParams) {
+  const { slug } = await params
   if (!requireAuth(request)) {
     return NextResponse.json(
       { error: 'Unauthorized' },
@@ -58,7 +60,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       )
     }
 
-    const filePath = path.join(blogDirectory, `${params.slug}.mdx`)
+    const filePath = path.join(blogDirectory, `${slug}.mdx`)
     
     if (!fs.existsSync(filePath)) {
       return NextResponse.json(
@@ -97,6 +99,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 }
 
 export async function DELETE(request: NextRequest, { params }: RouteParams) {
+  const { slug } = await params
   if (!requireAuth(request)) {
     return NextResponse.json(
       { error: 'Unauthorized' },
@@ -105,7 +108,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
   }
 
   try {
-    const filePath = path.join(blogDirectory, `${params.slug}.mdx`)
+    const filePath = path.join(blogDirectory, `${slug}.mdx`)
     
     if (!fs.existsSync(filePath)) {
       return NextResponse.json(

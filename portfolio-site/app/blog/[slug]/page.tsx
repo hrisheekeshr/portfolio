@@ -9,11 +9,12 @@ import Link from 'next/link'
 import { formatDistanceToNow } from 'date-fns'
 
 interface BlogPostPageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPost(params.slug)
+  const { slug } = await params
+  const post = getBlogPost(slug)
 
   if (!post || post.status !== 'published') {
     notFound()
